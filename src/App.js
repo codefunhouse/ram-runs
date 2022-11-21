@@ -3,6 +3,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Homepage from "./pages/homepage/homepage";
+import Jigsaw from "./pages/jigsaw/jiqsaw";
 import Landingpage from "./pages/landingpage/landingpage";
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
     {
       path: "/flippydolphin",
       element: <Homepage />,
+    },
+    {
+      path: "/jigsaw",
+      element: <Jigsaw />,
     },
     {
       path: "*",

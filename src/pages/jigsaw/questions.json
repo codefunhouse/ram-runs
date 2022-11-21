@@ -1,0 +1,92 @@
+[
+  {
+    "text": "What is selection?",
+    "answers": [
+      "Selection is making sure that the code runs in the order it was programmed",
+      "Selection is repeating lines of code when a user makes a choice",
+      "Selection is used to make choices in a programme depending on information",
+      "Selection is selecting the right sweets for your nan"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Which three words are used to check conditions in Python?",
+    "answers": [
+      "if, then, else",
+      "if, elif, else",
+      "if, elseif, then",
+      "if, then, elseif"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "What correct code in python will display - \"You can vote\" - if a user types in 19?",
+    "answers": [
+      "if age >= 18: print(\"You can vote\")",
+      "if age == 18: print (\"You can vote\")",
+      "if age < 18: print(\"You can vote\")",
+      "if age != 18: print (\"You can vote\")"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Which line of code below will check if a student is equal to or older than 18 years old?",
+    "answers": [
+      "if age >= 18",
+      "if age > 18:",
+      "if age < 18:",
+      "if age <= 18:"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Which of these conditional operators means not equals to?",
+    "answers": [
+      "==",
+      ".notequals",
+      ">",
+      "!="
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Which of these conditional operators means less than?",
+    "answers": [
+      ">",
+      "<",
+      "==",
+      ".isless"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Which of these conditional operators means greater than?",
+    "answers": [
+      "<",
+      "==",
+      ">",
+      ".isgreater"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Which of these conditional operators means equals to?",
+    "answers": [
+      "==",
+      "equals to",
+      "=",
+      ".isequals"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Which of these conditional operators means else if?",
+    "answers": [
+      "then",
+      "elif",
+      "elseif",
+      "else"
+    ],
+    "correct": 1
+  }
+]

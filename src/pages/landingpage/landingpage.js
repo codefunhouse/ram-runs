@@ -14,14 +14,28 @@ const Landingpage = () => {
               <img src={`/logo/logo.png`} alt="logo" />
             </div>
           </Col>
-          <Col>
-            <p className="navlink"
-              onClick={() => {
-                navigate('/flippydolphin')
-              }}
-            >
-              Play Game
-            </p>
+          <Col
+          >
+            <Row>
+              <Col>
+                <p className="navlink"
+                  onClick={() => {
+                    navigate('/flippydolphin')
+                  }}
+                >
+                  Play  Fillydolphin
+                </p>
+              </Col>
+              <Col>
+                <p className="navlink"
+                  onClick={() => {
+                    navigate('/jigsaw')
+                  }}
+                >
+                  Play  Code Jigsaw
+                </p>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </navbar>

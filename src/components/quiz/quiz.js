@@ -57,7 +57,7 @@ const Quiz = ({ loadingQuestions, quizQuestions, jumpInCorrectly, jumpCorrectly 
     if (getCurrrentAnswer === value) {
       if (quizQuestions.length - 1 === currentQuestion) {
         notification.success({
-          message: '  Way to go champ!',
+          message: ' Way to go champ!',
           description:
             'Great way to end the game! 👍 . Your Anchor NFT Will be Airdropped to your wallet.',
         });
