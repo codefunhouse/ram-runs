@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.win-modal {
+  h3 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: #800080;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #394d67;
+  }
+
+  .action-holder {
+    display: flex;
+    justify-content: center;
+
+    .action-btn {
+      background: #9f02c1;
+      box-shadow: 0px 4px 14px rgba(159, 9, 255, 0.4);
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #ffffff;
+      width: fit-content;
+      padding: 0.5rem 0.7rem;
+      cursor: pointer;
+    }
+  }
+
+  .img-holder {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 15rem;
+      height: 11rem;
+      margin-right: 6rem;
+
+      &.no-margin {
+        margin-right: 0rem;
+      }
+    }
+  }
+}
+
+.ant-input {
+  height: 2.5rem;
+}
+
+.ant-btn {
+  height: 2.5rem;
+}
+
+// homepage
+@import "../pages/homepage/homepage.scss";
+
+// landingpage
+@import "../pages/landingpage/landingpage.scss";
+
+// dolphin
+@import "../components/dolphin/dolphin.scss";
+
+// obstacle
+@import "../components/obstacle/obstacle.scss";
+
+// quiz
+@import "../components/quiz/quiz.scss";

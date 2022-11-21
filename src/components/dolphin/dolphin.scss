@@ -1,0 +1,13 @@
+.dolphin {
+  position: absolute;
+  transition: all 3s ease-in-out;
+
+  img {
+    width: 13rem;
+    height: 10rem;
+
+    &.flip {
+      transform: scaleX(-1);
+    }
+  }
+}

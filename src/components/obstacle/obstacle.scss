@@ -1,0 +1,9 @@
+.obstacle {
+  position: absolute;
+
+  img {
+    width: 25rem;
+    height: 20rem;
+    transform: scaleX(-1);
+  }
+}

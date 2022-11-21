@@ -1,0 +1,43 @@
+.quiz {
+  margin: 1rem;
+  
+  .ant-card-body {
+    padding: 1rem;
+  }
+
+  .top-info {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      &:last-child {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .time-limit {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .wrong-answer { 
+    color: red;
+  }
+
+  .right-answer { 
+    color: green;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+}
