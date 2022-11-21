@@ -69,7 +69,7 @@ const Quiz = ({ loadingQuestions, quizQuestions, jumpInCorrectly, jumpCorrectly 
       } else {
         sliderRef.current.next()
         notification.success({
-          message: 'Corrent Answer',
+          message: 'Correct Answer',
           description:
             'Ready to jump above the obstacle! 👍',
         });
