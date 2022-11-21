@@ -47,7 +47,7 @@ const Homepage = () => {
     walletConnection.requestSignIn(
       walletAddress, // contract requesting access
       title, // optional title
-      `${window.location}?success=true`, // optional redirect URL on success
+      `${window.location}?account_id=true`, // optional redirect URL on success
       `${window.location}` // optional redirect URL on failure
     );
   };
@@ -133,7 +133,7 @@ const Homepage = () => {
             key={nanoid()}
             style={{
               'bottom': 10 + '%',
-              'left': 7 * item + (index * 7) + '%'
+              'left': 7 * item + (index * 8) + '%'
             }}
           />
         ))
