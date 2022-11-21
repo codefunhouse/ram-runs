@@ -49,7 +49,7 @@ const Landingpage = () => {
             </h1>
 
             <p className="info-text">
-              Fun mini games built to keep you on your toes and push your learning forward. Win amazing rewards and even NFT tokens!
+              Fun mini games built to keep you on your toes and teach you the rules of programming. Win amazing rewards and even NFT tokens!
             </p>
 
             <p className='action-btn'
