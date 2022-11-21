@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+.puzzle-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+}
+.puzzle-score {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+.puzzle-layers {
+  position: relative;
+  width: auto;
+  height: 80%;
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.puzzle-image {
+  width: 100%;
+  height: 100%;
+}
+.puzzle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+.puzzle-piece {
+  flex: 0 0 33.33%;
+  border: 1px dashed white;
+  background: grey;
+}
+.puzzle-piece--solved {
+  background: none !important;
+}
+.question-wrapper {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.answers {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+}
+
+.answers button {
+  border: none;
+  background: none;
+}
+
+.answers button:hover {
+  cursor: pointer;
+}
