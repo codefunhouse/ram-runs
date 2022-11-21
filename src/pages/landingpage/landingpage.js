@@ -23,7 +23,7 @@ const Landingpage = () => {
                     navigate('/flippydolphin')
                   }}
                 >
-                  Play  Fillydolphin
+                  Play  Flippydolphin
                 </p>
               </Col>
               <Col>
