@@ -5,6 +5,7 @@ import {
 import Homepage from "./pages/homepage/homepage";
 import Jigsaw from "./pages/jigsaw/jiqsaw";
 import Landingpage from "./pages/landingpage/landingpage";
+import Learn from "./pages/learn/learn";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,6 +20,10 @@ function App() {
     {
       path: "/jigsaw",
       element: <Jigsaw />,
+    },
+    {
+      path: "/learn",
+      element: <Learn />,
     },
     {
       path: "*",

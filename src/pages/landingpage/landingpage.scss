@@ -1,7 +1,33 @@
 .landingpage {
-  padding: 2rem 3rem;
+  padding: 2rem 0rem;
+  position: relative;
 
-  navbar {
+  nav {
+    padding: 0rem 3rem;
+
+    .navlink {
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #ffffff;
+      width: fit-content;
+      padding: 0.5rem 0.7rem;
+      cursor: pointer;
+      margin-top: 0;
+    }
+  }
+
+  footer {
+    padding: 1.5rem 3rem;
+    margin-top: 3rem;
+    background: linear-gradient(90.07deg, #6f14a4 0.02%, #9f13c2 99.98%);
+    // position: fixed;
+    // left: 0;
+    // width: 100%;
+    // bottom: 0;
+
     .navlink {
       margin-bottom: 0;
       font-weight: 600;
@@ -18,6 +44,8 @@
 
   .banner {
     padding-top: 10rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 
     .new-feature {
       font-weight: 500;
@@ -84,6 +112,18 @@
       img {
         width: 99%;
       }
+    }
+  }
+
+  .chooserun {
+    margin-bottom: 10rem;
+
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 64px;
+      text-align: center;
+      color: #ffffff;
     }
   }
 }

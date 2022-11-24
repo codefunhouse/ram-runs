@@ -7,7 +7,7 @@ const Landingpage = () => {
 
   return (
     <div className='landingpage'>
-      <navbar>
+      <nav>
         <Row justify="space-between">
           <Col>
             <div className="logo-holder">
@@ -20,10 +20,19 @@ const Landingpage = () => {
               <Col>
                 <p className="navlink"
                   onClick={() => {
+                    navigate('/learn')
+                  }}
+                >
+                  Learn
+                </p>
+              </Col>
+              <Col>
+                <p className="navlink"
+                  onClick={() => {
                     navigate('/flippydolphin')
                   }}
                 >
-                  Play  Flippydolphin
+                  Play Flippydolphin
                 </p>
               </Col>
               <Col>
@@ -32,13 +41,13 @@ const Landingpage = () => {
                     navigate('/jigsaw')
                   }}
                 >
-                  Play  Code Jigsaw
+                  Play Code Jigsaw
                 </p>
               </Col>
             </Row>
           </Col>
         </Row>
-      </navbar>
+      </nav>
 
       <div className="banner">
         <Row>
@@ -82,6 +91,76 @@ const Landingpage = () => {
           </Col>
         </Row>
       </div>
+
+
+      {/* <div className="chooserun">
+        <h1>
+          Choose your Run
+        </h1>
+      </div> */}
+
+      <footer>
+        <Row justify="space-between">
+          <Col>
+            <p className="navlink"
+              onClick={() => {
+                navigate('/learn')
+              }}
+            >
+              Copyright © 2022 Code Funhouse. All Rights Reserved.
+            </p>
+          </Col>
+          <Col
+          >
+            <Row>
+              <Col>
+                <a className="navlink"
+                  rel="noreferrer"
+                  target="_blank"
+                  href='https://codefunhouse.com/about'
+                >
+                  About Us
+                </a>
+              </Col>
+              <Col>
+                <a className="navlink"
+                  rel="noreferrer"
+                  target="_blank"
+                  href='https://newaccount1622789710745.freshdesk.com/support/home'
+                >
+                  Contact Us
+                </a>
+              </Col>
+              <Col>
+                <a className="navlink"
+                  rel="noreferrer"
+                  target="_blank"
+                  href='https://community.codefunhouse.com/'
+                >
+                  Community
+                </a>
+              </Col>
+              <Col>
+                <a className="navlink"
+                  rel="noreferrer"
+                  target="_blank"
+                  href='https://newaccount1622789710745.freshdesk.com/support/home'
+                >
+                  FAQ
+                </a>
+              </Col>
+              <Col>
+                <a className="navlink"
+                  rel="noreferrer"
+                  href='https://codefunhouse.com/terms'
+                >
+                  Terms of Use
+                </a>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </footer>
     </div>
   )
 }
