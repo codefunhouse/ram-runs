@@ -1,28 +1,26 @@
-import './App.css';
 import React, { useEffect, useState } from 'react';
+import { Col, Row, Progress, Modal, notification } from 'antd'
+import {
+  HeartFilled
+} from '@ant-design/icons';
 import questionsList from './questions.json';
-import * as nearAPI from "near-api-js"
-import { Modal, notification } from 'antd'
-import { connectionConfig, walletAddress, title } from '../../configs';
 import { useLocation, useNavigate } from 'react-router-dom'
-// import useTimer from 'easytimer-react-hook';
+import * as nearAPI from "near-api-js"
+import { connectionConfig, walletAddress, title } from '../../configs';
+
 const BN = require("bn.js");
 
-
-const Jigsaw = () => {
+const JigsawIndex = () => {
   const navigate = useNavigate()
   const search = useLocation().search;
   const success = new URLSearchParams(search).get('account_id');
-  // const [timer] = useTimer({
-  //   countdown: true,
-  //   startValues: [0, 0, 1, 0, 0]
-  // });
 
   const [showWin, setShowWin] = useState(false)
   const [isModalOpenInit, setIsModalOpenInit] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [count, setCount] = useState(0);
   const [lives, setLives] = useState(3);
+
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -118,50 +116,97 @@ const Jigsaw = () => {
     }
   }, [count])
 
-
   return (
-    <div className="puzzle-wrapper">
-      <div className="puzzle-score">
-        <div>{[...Array(3).keys()].map(
-          (item) => <span className="puzzle-life">♥</span>
-        )}</div>
-        <div>{count}</div>
-      </div>
-      <div className="puzzle-layers">
-        <img src={`${process.env.PUBLIC_URL}/img/anchorjigsaw.png`} className="puzzle-image" alt="Jigsaw puzzle" />
-        <div className="puzzle">
-          {[...Array(12).keys()].map(
-            (item, i) => <div key={`jgswp-${i}`} className="puzzle-piece" id={`puzzle-piece-${i}`}></div>
-          )}</div>
-      </div>
-      <div className>
-        {lives && count < 9 && (
-          <div className="question-wrapper">
+    <div className='jigsaw'>
+      <h4>Jigsaw</h4>
 
-            <p>{`${count + 1}) `}{questionsList[count].text}</p>
-            <ol className='answers'>
-              {questionsList[count].answers.map(
-                (answer, i) => <li key={`jgswa-${i}`}>
-                  <button onClick={() => {
-                    if (questionsList[count].correct === i) {
-                      setCount(count + 1);
-                      document.querySelector(
-                        `#puzzle-piece-${count}`
-                      ).classList.add(
-                        'puzzle-piece--solved',
-                      );
-                    } else {
-                      setLives(lives - 1);
-                      document.querySelector(
-                        `.puzzle-life`
-                      ).remove();
-                    }
-                  }
-                  }>{answer}</button></li>
-              )}
-            </ol>
-          </div>
-        )}
+
+      <div className="jigsaw-holder">
+        <Row gutter={16}>
+          <Col lg={12}>
+            <div className="img-holder">
+              <div className="puzzle-layers">
+                <img src={`${process.env.PUBLIC_URL}/img/anchorjigsaw.png`} className="puzzle-image" alt="Jigsaw puzzle" />
+                <div className="puzzle">
+                  {[...Array(12).keys()].map(
+                    (item, i) => <div key={`jgswp-${i}`} className="puzzle-piece" id={`puzzle-piece-${i}`}></div>
+                  )}</div>
+              </div>
+            </div>
+          </Col>
+          <Col lg={12}>
+            <div className="top-holder">
+              <div className="lives">
+                {
+                  [...Array(lives).keys()].map((item) => (
+                    <HeartFilled />
+                  ))
+                }
+              </div>
+
+              <div className="scoreholder">
+                <span>
+                  {count}
+                </span>
+              </div>
+            </div>
+
+            <div className="question-holder">
+              {
+                lives && count < 9 &&
+                <>
+                  <p className='ques'>{`${count + 1})`} {questionsList[count].text}</p>
+
+                  <div className="options-holder">
+                    <Row gutter={32}>
+                      {questionsList[count].answers.map(
+                        (answer, i) =>
+                          <Col lg={12}>
+                            <div className="option-item"
+                              onClick={() => {
+                                if (questionsList[count].correct === i) {
+                                  setCount(count + 1);
+                                  document.querySelector(
+                                    `#puzzle-piece-${count}`
+                                  ).classList.add(
+                                    'puzzle-piece--solved',
+                                  );
+                                } else {
+                                  setLives(lives - 1);
+                                }
+                              }
+                              }
+                            >
+                              <span className="letter">
+                                {
+                                  i === 0 ?
+                                    'A' :
+                                    i === 1 ?
+                                      'B' :
+                                      i === 2 ?
+                                        'C' :
+                                        i === 3 ?
+                                          'D' : ''
+                                }
+                              </span>
+                              <p className="answer">
+                                {answer}
+                              </p>
+                            </div>
+                          </Col>
+                      )}
+                    </Row>
+                  </div>
+                </>
+              }
+
+
+              <div className="progress-holder">
+                <Progress percent={(count / 9) * 100} showInfo={false} strokeColor={'#6DD574'} />
+              </div>
+            </div>
+          </Col>
+        </Row>
       </div>
 
 
@@ -253,7 +298,7 @@ const Jigsaw = () => {
         </div>
       </Modal>
     </div>
-  );
+  )
 }
 
-export default Jigsaw;
+export default JigsawIndex

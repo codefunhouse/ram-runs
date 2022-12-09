@@ -1,0 +1,128 @@
+.jigsaw {
+  h4 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .jigsaw-holder {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto 5rem;
+    border-radius: 10px;
+    background: #c3e78d;
+    border-radius: 20px;
+
+    .img-holder {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 16px;
+      // height: 30rem;
+
+      .puzzle-image {
+        width: 100%;
+        height: 100%;
+      }
+      .puzzle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .puzzle-piece {
+        flex: 0 0 33.33%;
+        border: 1px dashed white;
+        background: grey;
+      }
+    }
+
+    .top-holder {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .lives {
+        background: #b0e42e;
+        border-radius: 30px;
+        padding: 0.6rem 0.8rem 0.6rem;
+
+        .anticon {
+          font-size: 20px;
+          padding-right: 0.5rem;
+          color: #ffffff;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+
+      .scoreholder {
+        span {
+          background: #b0e42e;
+          border-radius: 50%;
+          text-align: center;
+          padding: 0.5rem 1rem;
+          width: 50px;
+          height: 50px;
+          font-weight: 800;
+          font-size: 26px;
+          line-height: 34px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .question-holder {
+      background: #fdfdfd;
+      border-radius: 16px;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      .ques {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: #200e32;
+      }
+
+      .option-item {
+        display: flex;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        .letter {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 21px;
+          color: #200e32;
+          margin-right: 0.5rem;
+          padding-top: 0.5rem;
+        }
+
+        .answer {
+          background: #f0f0f0;
+          border-radius: 30px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+          color: #200e32;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding: 0.9rem;
+        }
+      }
+    }
+
+    .progress-holder {
+      margin-top: 1rem;
+    }
+  }
+}

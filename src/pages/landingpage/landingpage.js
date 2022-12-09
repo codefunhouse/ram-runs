@@ -44,6 +44,15 @@ const Landingpage = () => {
                   Play Code Jigsaw
                 </p>
               </Col>
+              <Col>
+                <p className="navlink"
+                  onClick={() => {
+                    window.location.assign('https://codefunhouse.com/')
+                  }}
+                >
+                  CodeFunhouse
+                </p>
+              </Col>
             </Row>
           </Col>
         </Row>
